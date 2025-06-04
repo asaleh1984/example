@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: monitoring daemon
+  creationTimestamp: null
+  labels:
+    run: monitoring-agent
+  name: monitoring-agent
+spec:
+  containers:
+  - image: monitoring-agent
+    name: monitoring-agent
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
